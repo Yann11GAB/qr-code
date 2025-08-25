@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Liens officiels — Marcel Ogouliguende</title>
+  <meta name="description" content="Tous les liens officiels de la campagne de Marcel Ogouliguende : réseaux, dons et contacts." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:title" content="Soutenir Marcel Ogouliguende">
+  <meta property="og:description" content="Réseaux sociaux, dons et contacts officiels.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#111827">
+</head>
+<body>
+  <!-- Bandeau accent Gabon -->
+  <div class="accent-bar" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="hero">
+        <div class="avatars">
+            <!-- Candidat -->
+            <img
+            class="avatar avatar-main"
+            src="images/logo.JPG"
+            alt="Marcel Ogouliguende — Candidat"
+            />
+            <!-- Suppléant (juste à côté, un peu plus petit) -->
+            <img
+            class="avatar avatar-deputy"
+            src="images/tessi.jpg"
+            alt="Brandt Tessy Ndomba — Suppléant"
+            />
+        </div>
+
+        <!-- Noms bien centrés -->
+        <h1 class="title">Marcel Ogouliguende</h1>
+        <p class="subtitle">Brandt Tessy Ndomba</p>
+
+        <p class="tagline">Unis par nos racines — connectés au monde</p>
+    </header>
+
+ 
+
+    <section class="card">
+      <h2 class="section-title">Réseaux sociaux</h2>
+      <nav class="links">
+        <a class="link-btn" href="https://www.facebook.com/share/1BX7ta9B2R/" target="_blank" rel="noopener" aria-label="Facebook officiel">
+           <img class="icon" src="images/facebook.png" alt="Facebook">
+           <span class="label">Facebook</span>
+        </a>
+        <a class="link-btn" href="https://www.instagram.com/diasporaduvraichangement?utm_source=qr&igsh=MXZleXZmYmxzajRxcQ==" target="_blank" rel="noopener" aria-label="Instagram officiel">
+           <img class="icon" src="images/instagram.jpg" alt="Instagram">
+           <span class="label">Instagram</span>
+        </a>
+        <a class="link-btn" href="https://www.tiktok.com/@diasporaduvraichangement?_t=ZN-8z9X6FqrD8w&_r=1" target="_blank" rel="noopener" aria-label="TikTok officiel">
+          <img class="icon" src="images/tiktok.png" alt="TikTok">
+          <span class="label">TikTok</span>
+        </a>
+        <a class="link-btn" href="https://youtube.com/@..." target="_blank" rel="noopener" aria-label="YouTube officiel">
+          <img class="icon" src="images/youtube.png" alt="YouTube">
+          <span class="label">YouTube</span>        
+        </a>
+      </nav>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Soutenir la campagne</h2>
+      <nav class="links">
+        <a class="link-btn primary" href="https://paypal.me/..." target="_blank" rel="noopener" aria-label="Faire un don via PayPal">
+          <img class="icon" src="images/paypal.png" alt="PayPal">
+          <span class="label">Faire un don — PayPal</span>
+        </a>
+        <a class="link-btn" href="http://spot.fund/72tnll8sc" target="_blank" rel="noopener" aria-label="Contribuer via SpotFundMe">
+          <img class="icon" src="images/spotfund.png" alt="SpotFundMe">
+          <span class="label">Contribuer — SpotFundMe</span>
+        </a>
+        <!-- Si Airtel Money n’a pas de lien direct, proposez un WhatsApp prérempli -->
+        <a class="link-btn" href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20soutenir%20la%20campagne%20(Airtel%20Money)" target="_blank" rel="noopener" aria-label="Don via Airtel Money (WhatsApp)">
+          <img class="icon" src="images/airtelmoney.jpg" alt="Airtel Money">
+          <span class="label">Don — Airtel Money (WhatsApp)</span>
+        </a>
+      </nav>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Contact</h2>
+      <nav class="links">
+        <a class="link-btn" href="mailto:diasporaduvraichangement@gmail.com" aria-label="Contacter par e-mail">
+          <img class="icon" src="images/email.png" alt="Email">
+          <span class="label">diasporaduvraichangement@gmail.com</span>
+        </a>
+        <a class="link-btn" href="https://wa.me/33600000000?text=Bonjour%20Marcel%2C%20j%E2%80%99aimerais%20en%20savoir%20plus%20sur%20la%20campagne" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+          <img class="icon" src="images/whatsapp.jpg" alt="WhatsApp">
+          <span class="label">WhatsApp</span>
+        </a>
+      </nav>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Équipe de campagne — Tous droits réservés.</p>
+    </footer>
+  </main>
+
+  <script>
+    // année auto
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

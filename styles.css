@@ -1,0 +1,298 @@
+/* ====== Variables (thème clair par défaut) ====== */
+:root{
+  /* Couleurs UI */
+  --bg: #f5f7fb;
+  --page-text: #0f172a;
+  --muted: #64748b;
+
+  --card-bg: #ffffff;
+  --card-border: rgba(15,23,42,0.06);
+  --card-shadow: 0 10px 30px rgba(2,6,23,.06);
+
+  --btn-bg: #ffffff;
+  --btn-hover: #f3f4f6;
+  --btn-border: rgba(15,23,42,0.08);
+  --btn-border-hover: rgba(15,23,42,0.16);
+  --btn-shadow: 0 6px 16px rgba(2,6,23,.06);
+
+  /* CTA principal (vert campagne / Gabon) */
+  --primary: #0ea05a;
+  --primary-hover: #0b7f47;
+
+  /* Accent Gabon */
+  --gabon-green: #009e60;
+  --gabon-yellow: #fcd116;
+  --gabon-blue: #3a75c4;
+
+  /* Rayons / ombres */
+  --radius-xl: 22px;
+  --pill-radius: 24px;
+}
+
+/* ====== Reset de base ====== */
+*{ box-sizing: border-box; }
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(1200px 600px at 50% -10%, #ffffff 0%, var(--bg) 60%);
+  color: var(--page-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans",
+               "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ====== Barre d’accent Gabon ====== */
+.accent-bar{
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--gabon-green), var(--gabon-yellow), var(--gabon-blue));
+}
+
+/* ====== Mise en page ====== */
+.page{
+  max-width: 780px;
+  margin: clamp(28px, 6vw, 60px) auto;
+  padding: 0 20px;
+}
+
+.hero{
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.logo{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;            /* recadre la photo */
+  object-position: 50% 45%;     /* remonte légèrement le visage si besoin */
+  border-radius: 9999px;        /* full round */
+  background: transparent;
+  border: none;
+  box-shadow: 0 8px 24px rgba(2,6,23,.10);
+  padding: 0;                   /* supprime tout halo */
+}
+
+h1{
+  font-size: clamp(26px, 3.2vw, 36px);
+  margin: 16px 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.tagline{
+  margin: 0 auto;
+  max-width: 520px;
+  color: var(--muted);
+}
+
+/* ====== Cartes ====== */
+.card{
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--card-shadow);
+  padding: clamp(18px, 3.5vw, 28px);
+  margin: 18px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bordure d’accent très fine autour de la carte (subtil) */
+.card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  padding: 1px;
+  background: linear-gradient(135deg,
+               rgba(0,158,96,.25),
+               rgba(252,209,22,.20),
+               rgba(58,117,196,.25));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+.section-title{
+  margin: 0 0 12px;
+  font-size: clamp(18px, 2.2vw, 20px);
+  color: var(--page-text);
+  font-weight: 600;
+  opacity: .95;
+}
+
+/* ====== Grille de liens ====== */
+.links{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 540px){
+  .links{ grid-template-columns: 1fr; }
+}
+
+/* ====== Boutons (pills) ====== */
+.link-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: var(--pill-radius);
+  text-decoration: none;
+  color: var(--page-text);
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  box-shadow: var(--btn-shadow);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease, filter .18s ease;
+  will-change: transform, filter;
+}
+
+.link-btn:hover{
+  background: var(--btn-hover);
+  border-color: var(--btn-border-hover);
+  transform: translateY(-1px);
+}
+
+/* Focus clavier accessible */
+.link-btn:focus-visible{
+  outline: 2px solid var(--gabon-yellow);
+  outline-offset: 2px;
+}
+
+/* Icône dans les boutons (images) */
+.link-btn img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex: 0 0 22px;
+  border-radius: 6px;  /* arrondis doux si l’icône est carrée */
+  background: transparent;
+  padding: 0;
+}
+
+/* Texte dans le bouton (si tu utilises <span class="label">) */
+.link-btn .label{
+  font-size: 16px;
+  letter-spacing: .1px;
+  line-height: 1.2;
+  color: var(--page-text);
+}
+
+/* ====== CTA principal (PayPal) ====== */
+.link-btn.primary{
+  background: var(--primary);
+  color: #ffffff;
+  border-color: rgba(255,255,255,0.12);
+}
+.link-btn.primary:hover{
+  background: var(--primary-hover);
+}
+
+/* ====== Pied de page ====== */
+.footer{
+  text-align: center;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 14px;
+  opacity: .95;
+}
+
+/* ====== Préférence utilisateur : réduire les animations ====== */
+@media (prefers-reduced-motion: reduce){
+  .link-btn{ transition: none; }
+  .link-btn:hover{ transform: none; }
+}
+
+/* ====== Variante sombre automatique (si l’utilisateur préfère dark) ====== */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b0b0c;
+    --page-text: #e5e7eb;
+    --muted: #a1a1aa;
+
+    --card-bg: #111317;
+    --card-border: rgba(255,255,255,0.08);
+    --card-shadow: 0 10px 30px rgba(0,0,0,.35);
+
+    --btn-bg: #161a22;
+    --btn-hover: #1d2430;
+    --btn-border: rgba(255,255,255,0.06);
+    --btn-border-hover: rgba(255,255,255,0.12);
+    --btn-shadow: 0 6px 16px rgba(0,0,0,.25);
+
+    --primary: #3a75c4;         
+    --primary-hover: #2f61a3;
+  }
+
+  html, body{
+    background: radial-gradient(1200px 600px at 50% -10%, #121419 0%, var(--bg) 60%);
+    color: var(--page-text);
+  }
+
+  .link-btn .label{ color: var(--page-text); }
+}
+
+/* ====== Avatars en duo (candidat + suppléant) ====== */
+.hero{
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.avatars{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0; /* on colle visuellement via un margin négatif sur le second */
+  margin-bottom: 14px;
+}
+
+/* “Ring” de propreté qui s’adapte au thème (clair/sombre) */
+:root{
+  --avatar-ring: var(--bg); /* reprend la couleur de fond globale */
+}
+
+/* Style commun aux deux avatars */
+.avatar{
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  object-fit: cover;
+  object-position: 50% 45%;
+  box-shadow:
+    0 0 0 4px var(--avatar-ring),        /* ring propre autour de la photo */
+    0 8px 24px rgba(2, 6, 23, .10);      /* ombre douce */
+}
+
+/* Candidat = plus grand */
+.avatar-main{
+  width: 120px;
+  height: 120px;
+}
+
+/* Suppléant = légèrement plus petit et “collé” au principal */
+.avatar-deputy{
+  width: 100px;
+  height: 100px;
+  margin-left: -20px; /* chevauche pour donner l'effet collé */
+  object-position: 50% 28%;
+}
+
+/* Titres centrés et hiérarchisés */
+.title{
+  font-size: clamp(28px, 3.4vw, 40px);
+  margin: 10px 0 4px;
+  letter-spacing: -0.02em;
+  color: var(--page-text);
+}
+
+.subtitle{
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: clamp(14px, 1.6vw, 16px);
+}
+
+
