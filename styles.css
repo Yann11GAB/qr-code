@@ -295,4 +295,29 @@ h1{
   font-size: clamp(14px, 1.6vw, 16px);
 }
 
+/* Bouton Gmail : pill extra-long + transition lente */
+.link-btn.mail {
+  display: flex;
+  justify-content: center;         /* centrage du contenu */
+  align-items: center;
+  border-radius: 999px;            /* pill maximum */
+  padding: 16px 38px;              /* plus haut et plus large */
+  font-size: 18px;
+  font-weight: 500;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 8px 20px rgba(2,6,23,.08);
+  transition: all 0.6s ease;       /* transition plus lente */
+}
 
+.link-btn.mail img {
+  width: 26px;
+  height: 26px;
+}
+
+.link-btn.mail:hover {
+  background: #f1f3f5;
+  border-color: rgba(0,0,0,.18);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(2,6,23,.14);
+}

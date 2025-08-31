@@ -10,72 +10,84 @@
   <meta property="og:title" content="Soutenir Marcel Ogouliguende">
   <meta property="og:description" content="Réseaux sociaux, dons et contacts officiels.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#111827">
+  <meta name="theme-color" content="#0ea05a">
 </head>
 <body>
   <!-- Bandeau accent Gabon -->
   <div class="accent-bar" aria-hidden="true"></div>
 
   <main class="page">
+    <!-- Header avec duo d'avatars -->
     <header class="hero">
-        <div class="avatars">
-            <!-- Candidat -->
-            <img
-            class="avatar avatar-main"
-            src="images/logo.JPG"
-            alt="Marcel Ogouliguende — Candidat"
-            />
-            <!-- Suppléant (juste à côté, un peu plus petit) -->
-            <img
-            class="avatar avatar-deputy"
-            src="images/tessi.jpg"
-            alt="Brandt Tessy Ndomba — Suppléant"
-            />
-        </div>
+      <div class="avatars">
+        <!-- Candidat -->
+        <img
+          class="avatar avatar-main"
+          src="images/logo.JPG"
+          alt="Marcel Ogouliguende — Candidat"
+        />
+        <!-- Suppléant -->
+        <img
+          class="avatar avatar-deputy"
+          src="images/tessi.jpg"
+          alt="Brandt Tessy Ndomba — Suppléant"
+        />
+      </div>
 
-        <!-- Noms bien centrés -->
-        <h1 class="title">Marcel Ogouliguende</h1>
-        <p class="subtitle">Brandt Tessy Ndomba</p>
+      <!-- Noms bien centrés -->
+      <h1 class="title">Marcel Ogouliguende</h1>
+      <p class="subtitle">Brandt Tessy Ndomba</p>
 
-        <p class="tagline">Unis par nos racines — connectés au monde</p>
+      <p class="tagline">Unis par nos racines — connectés au monde</p>
     </header>
 
- 
-
+    <!-- Réseaux sociaux (avec WhatsApp mis en avant) -->
     <section class="card">
       <h2 class="section-title">Réseaux sociaux</h2>
-      <nav class="links">
+      <nav class="links" aria-label="Réseaux sociaux officiels">
         <a class="link-btn" href="https://www.facebook.com/share/16srHz6YYS/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook officiel">
-           <img class="icon" src="images/facebook.png" alt="Facebook">
-           <span class="label">Facebook</span>
+          <img class="icon" src="images/facebook.png" alt="Facebook">
+          <span class="label">Facebook</span>
         </a>
+
         <a class="link-btn" href="https://www.instagram.com/diasporaduvraichangement?igsh=MTJoYnRkcXAyZ3ZheQ==" target="_blank" rel="noopener" aria-label="Instagram officiel">
-           <img class="icon" src="images/instagram.jpg" alt="Instagram">
-           <span class="label">Instagram</span>
+          <img class="icon" src="images/instagram.jpg" alt="Instagram">
+          <span class="label">Instagram</span>
         </a>
+
         <a class="link-btn" href="https://www.tiktok.com/@diasporaduvraichangement?_t=ZN-8zE524pbkBi&_r=1" target="_blank" rel="noopener" aria-label="TikTok officiel">
           <img class="icon" src="images/tiktok.png" alt="TikTok">
           <span class="label">TikTok</span>
         </a>
+
         <a class="link-btn" href="https://youtube.com/@..." target="_blank" rel="noopener" aria-label="YouTube officiel">
           <img class="icon" src="images/youtube.png" alt="YouTube">
-          <span class="label">YouTube</span>        
+          <span class="label">YouTube</span>
+        </a>
+
+        <!-- WhatsApp déplacé ici + message “communauté/chaîne” -->
+        <a class="link-btn whatsapp" href="https://whatsapp.com/channel/0029VbB2fGx1noz2MxgGUX20" target="_blank" rel="noopener" aria-label="Rejoindre notre communauté WhatsApp">
+          <img class="icon" src="images/whatsapp.jpg" alt="WhatsApp">
+          <span class="label">Rejoindre notre chaine WhatsApp</span>
         </a>
       </nav>
     </section>
 
+    <!-- Dons -->
     <section class="card">
       <h2 class="section-title">Soutenir la campagne</h2>
-      <nav class="links">
+      <nav class="links" aria-label="Soutenir la campagne">
         <a class="link-btn primary" href="https://paypal.me/DiaspoVraiChangement" target="_blank" rel="noopener" aria-label="Faire un don via PayPal">
           <img class="icon" src="images/paypal.png" alt="PayPal">
           <span class="label">Faire un don — PayPal</span>
         </a>
+
         <a class="link-btn" href="http://spot.fund/72tnll8sc" target="_blank" rel="noopener" aria-label="Contribuer via SpotFundMe">
           <img class="icon" src="images/spotfund.png" alt="SpotFundMe">
           <span class="label">Contribuer — SpotFundMe</span>
         </a>
-        <!-- Si Airtel Money n’a pas de lien direct, proposez un WhatsApp prérempli -->
+
+        <!-- Si Airtel Money n’a pas de lien direct, rediriger sur WhatsApp prérempli -->
         <a class="link-btn" href="https://wa.me/33600000000?text=Bonjour%2C%20je%20souhaite%20soutenir%20la%20campagne%20(Airtel%20Money)" target="_blank" rel="noopener" aria-label="Don via Airtel Money (WhatsApp)">
           <img class="icon" src="images/airtelmoney.jpg" alt="Airtel Money">
           <span class="label">Don — Airtel Money (WhatsApp)</span>
@@ -83,16 +95,13 @@
       </nav>
     </section>
 
+    <!-- Contact -->
     <section class="card">
       <h2 class="section-title">Contact</h2>
-      <nav class="links">
-        <a class="link-btn" href="mailto:diasporaduvraichangement@gmail.com" aria-label="Contacter par e-mail">
+      <nav class="links" aria-label="Contact officiel">
+        <a class="link-btn mail" href="mailto:diasporaduvraichangement@gmail.com" aria-label="Contacter par e-mail">
           <img class="icon" src="images/email.png" alt="Email">
           <span class="label">Mail</span>
-        </a>
-        <a class="link-btn" href="https://whatsapp.com/channel/0029VbB2fGx1noz2MxgGUX20" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
-          <img class="icon" src="images/whatsapp.jpg" alt="WhatsApp">
-          <span class="label">WhatsApp</span>
         </a>
       </nav>
     </section>
@@ -104,7 +113,7 @@
   </main>
 
   <script>
-    // année auto
+    // Année auto
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
